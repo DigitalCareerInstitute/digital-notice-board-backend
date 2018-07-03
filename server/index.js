@@ -1,9 +1,10 @@
+const path = require("path");
+require('dotenv').config({path: path.join(__dirname + '/../.env')});
 const express = require('express');
 const app = express();
 const mongo = require('mongodb');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const dotenv = require('dotenv').config();
 const cookieParser = require('cookie-parser');
 const expressValidator = require('express-validator');
 const session = require('express-session');
@@ -11,7 +12,6 @@ const passport = require('passport');
 const flash = require("connect-flash");
 const userRoutes = require("./routes/users");
 const adminRoutes = require("./routes/admin");
-const path = require("path");
 const moment = require('moment');
 
 // Bring in Models

@@ -27,7 +27,7 @@ const addSlide = (req, res) => {
           res.status(400);
           res.send("Error: ", err);
         }
-        es.send({message: "Content created successfully!"})
+        res.send({message: "Content created successfully!"})
     });
 };
 
